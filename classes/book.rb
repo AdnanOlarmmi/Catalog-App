@@ -11,9 +11,6 @@ class Book < Item
     end
 
     def can_be_archived?   
-        # Item.can_be_archived? 
         super || @cover_state == 'bad'
     end
 end
-
-puts Book.new('1984', '2020-09-21', 'Penguin', 'bad').can_be_archived?
