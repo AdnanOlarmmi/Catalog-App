@@ -14,3 +14,5 @@ class Book < Item
         super || @cover_state == 'bad'
     end
 end
+
+puts Book.new('The Hobbit', '2020-09-21', 'Allen & Unwin', 'bad').can_be_archived?

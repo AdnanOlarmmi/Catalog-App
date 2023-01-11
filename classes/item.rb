@@ -1,7 +1,9 @@
 require 'date'
 
 class Item
-  attr_accessor :publish_date, :genre, :author, :label, :source
+  attr_accessor :publish_date, :genre, :author, :label
+
+  attr_reader :id, :archived
 
 
   def initialize(publish_date, archived: false)
@@ -37,3 +39,5 @@ class Item
     current_year - publish_year > 10
   end
 end
+
+
