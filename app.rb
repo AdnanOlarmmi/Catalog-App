@@ -10,23 +10,31 @@ require_relative './modules/book_logic'
 require_relative './modules/genre_logic'
 require_relative './modules/label_logic'
 require_relative './modules/music_logic'
+require_relative './modules/authors_logic'
+require_relative './modules/games_logic'
 
 class App
+  include AuthorsModule
   include BookModule
   include GenreModule
   include MusicAlbumModule
   include LabelModule
+  include GamesModule
   def initialize
     @books = load_book
     @genres = load_genres
     @labels = load_label
     @music_albums = load_music_albums
+    @authors = load_authors
+    @games = load_games
   end
 
   def save_data
+    create_games
     create_book
     create_genre
     create_music_album
+    create_author
   end
 
   def run
@@ -54,8 +62,14 @@ class App
       list_books
     when 2
       list_all_music_album
+    when 3
+      list_all_games
+    when 4
+      list_genres
     when 5
       list_all_labels
+    when 6
+      list_all_authors
     when 7
       add_book
     when 8
@@ -63,7 +77,7 @@ class App
     when 9
       add_a_movie
     when 10
-      add_a_game
+      add_game
     when 11
       save_data
       puts 'Thank you'
@@ -134,6 +148,35 @@ class App
     puts 'There are no genres yet!' if @genres.empty?
     @genres.each do |genre|
       puts "Name: #{genre.name}"
+    end
+  end
+
+  def add_game
+    puts 'Please write multiplayer: '
+    multiplayer = gets.chomp
+
+    puts 'Please write date of publish [Enter date (yyyy-mm-dd)]'
+    publish_date = gets.chomp
+
+    puts 'Please write last played date [Enter date (yyyy-mm-dd)]'
+    last_played_date = gets.chomp
+
+    @games.push(Game.new(multiplayer, publish_date, last_played_date))
+    puts 'Game is created'
+  end
+
+  def list_all_games
+    puts 'Games:'
+    @games.each do |games|
+      puts "Multiplayer: #{games.multiplayer}, Publish Date: #{games.publish_date},
+      Last played date: #{games.last_played_date}"
+    end
+  end
+
+  def list_all_authors
+    puts 'There are no authors yet!' if @authors.empty?
+    @authors.each do |author|
+      puts "first name: #{author.first_name}, last name: #{author.last_name}"
     end
   end
 end
