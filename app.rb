@@ -8,14 +8,18 @@ require_relative 'classes/music_album'
 
 
 require_relative './modules/book_logic'
+require_relative './modules/genre_logic'
 
 class App
     include BookModule
+include GenreModule
     def initialize
         @books = load_book
+        @genres = load_genres
      end
      def save_data
          create_book
+         create_genre
      end
      def run
   
@@ -41,6 +45,8 @@ class App
          case option
          when 1
              list_books
+         when 4 
+            list_genres
          when 7
              add_book
          when 11
@@ -77,5 +83,12 @@ class App
           puts "Title: #{book.title}, Publisher: #{book.publisher}, Publish Date: #{book.publish_date},
           Cover state: #{book.cover_state}"
         end
-      end
+    end
+
+    def list_genres
+        puts 'There are no genres yet!' if @genres.empty?
+        @genres.each do |genre|
+          puts "Name: #{genre.name}"
+        end
+    end
 end

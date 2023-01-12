@@ -1,13 +1,13 @@
 require 'json'
-require '../classes/genre'
+require_relative '../classes/genre'
 
-Module GenreModule
+module GenreModule
     def load_genres
         data = []
         file = './data/genre.json'
         if File.exist?(file)
             JSON.parse(File.read(file)).each do |genre|
-                data.push(Genre.new(genre['name'], genre['description']))
+                data.push(Genre.new(genre['name']))
             end
         else
             File.write(file, [])
