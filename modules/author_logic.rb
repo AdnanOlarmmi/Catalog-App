@@ -6,7 +6,7 @@ module AuthorModule
     def load_authors
         data = []
         file = './data/authors.json'
-        if File.exist(file)
+        if File.exist?(file)
             JSON.parse(File.read(file)).each do |author|
                 data.push(Author.new(author['name']))
             end
@@ -18,7 +18,7 @@ module AuthorModule
     def create_author
         data = []
         @authors.each do |author|
-            data.push({name: author.name})
+            data.push({name: author['name']})
         end
 
         File.write('./data/authors.json', JSON.generate(data))

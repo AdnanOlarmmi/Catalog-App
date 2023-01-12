@@ -10,11 +10,11 @@ require_relative './modules/book_logic'
 require_relative './modules/genre_logic'
 require_relative './modules/label_logic'
 require_relative './modules/music_logic'
-require_relative './modules/authors_logic'
+require_relative './modules/author_logic'
 require_relative './modules/games_logic'
 
 class App
-  include AuthorsModule
+  include AuthorModule
   include BookModule
   include GenreModule
   include MusicAlbumModule
@@ -70,6 +70,8 @@ class App
       list_all_authors
     when 7
       add_book
+    when 8
+        add_music_album
     when 10
       add_game
     when 11
@@ -95,6 +97,7 @@ class App
     puts 'book created'
     book = Book.new(title, author, publish_date, publisher, cover_state)
     @books.push(book)
+    @authors.push(Author.new(author))
   end
 
   def add_music_album
@@ -103,8 +106,11 @@ class App
     puts 'Publish_date'
     publish_date = gets.chomp
     puts 'On Spotify true or false'
-    on_spotify = gets.chomp
-    @music_album.push(MusicAlbum.new(name, publish_date, on_spotify))
+    on_spotify = gets.chomp == 'true' ? true : false
+    puts 'What genre is the above music'
+    genre = gets.chomp
+    @genres.push(Genre.new(genre))
+    @music_albums.push(MusicAlbum.new(name, publish_date, on_spotify))
     puts 'Music album added'
   end
 
@@ -155,7 +161,7 @@ class App
   def list_all_authors
     puts 'There are no authors yet!' if @authors.empty?
     @authors.each do |author|
-      puts "first name: #{author.first_name}, last name: #{author.last_name}"
+      puts "Author's name is: #{author['name']}"
     end
   end
 end

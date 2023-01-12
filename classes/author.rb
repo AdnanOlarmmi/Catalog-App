@@ -1,5 +1,5 @@
 class Author
-  attr_reader :name, :items
+  attr_accessor :name, :items
 
   def initialize(name)
     @id = Random.rand(1..1000)
@@ -13,6 +13,3 @@ class Author
   end
 end
 
-dummy = Author.new('John Doe')
-
-puts dummy.name
