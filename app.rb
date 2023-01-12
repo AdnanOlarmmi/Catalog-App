@@ -61,7 +61,7 @@ class App
     when 1
       list_books
     when 2
-        list_music_albums
+      list_music_albums
     when 3
       list_all_games
     when 4
@@ -73,7 +73,7 @@ class App
     when 7
       add_book
     when 8
-        add_music_album
+      add_music_album
     when 9
       add_game
     when 10
@@ -108,7 +108,7 @@ class App
     puts 'Publish_date'
     publish_date = gets.chomp
     puts 'On Spotify true or false'
-    on_spotify = gets.chomp == 'true' ? true : false
+    on_spotify = gets.chomp == 'true'
     puts 'What genre is the above music'
     genre = gets.chomp
     @genres.push(Genre.new(genre))

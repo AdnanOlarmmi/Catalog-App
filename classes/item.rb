@@ -37,5 +37,3 @@ class Item
     current_year - publish_year > 10
   end
 end
-
-dummy = Item.new('John Doe', '2019-01-01')
