@@ -35,6 +35,7 @@ class App
     create_genre
     create_music_album
     create_author
+    create_label
   end
 
   def run
@@ -48,9 +49,8 @@ class App
     puts '6 - List all authors'
     puts '7 - Add a book'
     puts '8 - Add a music album'
-    puts '9 - Add a movie'
-    puts '10 - Add a game'
-    puts '11 - Exit'
+    puts '9 - Add a game'
+    puts '10 - Exit'
     option = gets.chomp.to_i
     input(option)
     run
@@ -60,6 +60,8 @@ class App
     case option
     when 1
       list_books
+    when 2
+        list_music_albums
     when 3
       list_all_games
     when 4
@@ -72,9 +74,9 @@ class App
       add_book
     when 8
         add_music_album
-    when 10
+    when 9
       add_game
-    when 11
+    when 10
       save_data
       puts 'Thank you'
       exit
@@ -146,6 +148,12 @@ class App
     puts 'Please write last played date [Enter date (yyyy-mm-dd)]'
     last_played_date = gets.chomp
 
+    puts 'Please Input label\'s title'
+    title = gets.chomp
+    puts 'Please Inpute= label\'s color'
+    color = gets.chomp
+
+    @labels.push(Label.new(title, color))
     @games.push(Game.new(multiplayer, publish_date, last_played_date))
     puts 'Game is created'
   end
