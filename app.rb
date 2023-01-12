@@ -8,18 +8,25 @@ require_relative 'classes/music_album'
 
 require_relative './modules/book_logic'
 require_relative './modules/genre_logic'
+require_relative './modules/label_logic'
+require_relative './modules/music_logic'
 
 class App
   include BookModule
   include GenreModule
+  include MusicAlbumModule
+  include LabelModule
   def initialize
     @books = load_book
     @genres = load_genres
+    @labels = load_label
+    @music_albums = load_music_albums
   end
 
   def save_data
     create_book
     create_genre
+    create_music_album
   end
 
   def run
@@ -47,6 +54,8 @@ class App
       list_books
     when 4
       list_genres
+    when 5
+      list_all_labels
     when 7
       add_book
     when 11
@@ -71,6 +80,25 @@ class App
     book = Book.new(title, publish_date, publisher, cover_state)
     @books.push(book)
   end
+
+  def add_music_album
+    puts 'Add album name:'
+    name = gets.chomp
+    puts 'Publish_date'
+    publish_date = gets.chomp
+    puts 'On Spotify true or false'
+    on_spotify = gets.chomp
+    @music_album.push(MusicAlbum.new(name, publish_date, on_spotify))
+    puts 'Music album added'
+  end  
+
+  def list_all_labels
+    puts "no labels yet!" if @labels.empty?
+    @labels.each do |label|
+      puts "Title: #{label.title}, color: #{label.color}"
+    end
+  end 
+
 
   def list_books
     puts 'There are no books yet!' if @books.empty?
