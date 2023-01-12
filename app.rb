@@ -60,6 +60,8 @@ class App
     case option
     when 1
       list_books
+    when 2
+      list_all_music_album
     when 3
       list_all_games
     when 4
@@ -70,6 +72,10 @@ class App
       list_all_authors
     when 7
       add_book
+    when 8
+      add_music_album
+    when 9
+      add_a_movie
     when 10
       add_game
     when 11
@@ -78,6 +84,14 @@ class App
       exit
     else
       puts 'invalid option'
+    end
+  end
+
+  def list_all_music_album
+    puts 'Music Albums:'
+    @music_albums.each do |music_album|
+      puts "Name: #{music_album.name}, Publish Date: #{music_album.publish_date},
+      On Spotify: #{music_album.on_spotify}"
     end
   end
 
@@ -102,7 +116,16 @@ class App
     publish_date = gets.chomp
     puts 'On Spotify true or false'
     on_spotify = gets.chomp
-    @music_album.push(MusicAlbum.new(name, publish_date, on_spotify))
+
+    case on_spotify
+    when 'true'
+      on_spotify = true
+    when 'false'
+      on_spotify = false
+    else
+      puts 'It should be true or false'
+    end
+    @music_albums.push(MusicAlbum.new(name, publish_date, on_spotify))
     puts 'Music album added'
   end
 

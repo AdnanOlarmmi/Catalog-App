@@ -1,12 +1,13 @@
 require_relative 'item'
 
 class MusicAlbum < Item
-  attr_reader :on_spotify, :name
+  attr_accessor :on_spotify
+  attr_reader :items
 
   def initialize(name, publish_date, on_spotify)
-    super(publish_date, archived: false)
-    @name = name
+    super(name, publish_date)
     @on_spotify = on_spotify
+    @items = []
   end
 
   def can_be_archived?
