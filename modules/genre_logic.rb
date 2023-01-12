@@ -18,7 +18,7 @@ module GenreModule
 
   def create_genre
     data = []
-    @music_albums.each do |genre|
+    @genres.each do |genre|
       data.push({ id: genre.id, name: genre.name })
     end
     File.write('./data/genre.json', JSON.generate(data))
