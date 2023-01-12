@@ -97,7 +97,7 @@ class App
     puts 'Please enter the cover state of the book(eg. good, bad)'
     cover_state = gets.chomp
     puts 'book created'
-    book = Book.new(title, author, publish_date, publisher, cover_state)
+    book = Book.new(title, author, publisher, cover_state, publish_date)
     @books.push(book)
     @authors.push(Author.new(author))
   end
