@@ -1,14 +1,17 @@
 class Author
-  attr_reader :first_name, :last_name, :items
+  attr_reader :name, :items
 
-  def initialize(first_name, last_name)
+  def initialize(name)
     @id = Random.rand(1..1000)
     @items = []
-    @first_name = first_name
-    @last_name = last_name
+    @name = name
   end
 
   def add_item(item)
     @items.push(item)
   end
 end
+
+dummy = Author.new('John Doe')
+
+puts dummy.name

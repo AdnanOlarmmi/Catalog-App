@@ -72,12 +72,14 @@ class App
     title = gets.chomp
     puts 'Please enter the publish date of the book'
     publish_date = gets.chomp
+    puts 'Enter the author\'s name'
+    author = gets.chomp
     puts 'Please enter the Publisher of the book'
     publisher = gets.chomp
     puts 'Please enter the cover state of the book(eg. good, bad)'
     cover_state = gets.chomp
     puts 'book created'
-    book = Book.new(title, publish_date, publisher, cover_state)
+    book = Book.new(title, author, publish_date, publisher, cover_state)
     @books.push(book)
   end
 
