@@ -90,15 +90,14 @@ class App
     on_spotify = gets.chomp
     @music_album.push(MusicAlbum.new(name, publish_date, on_spotify))
     puts 'Music album added'
-  end  
+  end
 
   def list_all_labels
-    puts "no labels yet!" if @labels.empty?
+    puts 'no labels yet!' if @labels.empty?
     @labels.each do |label|
       puts "Title: #{label.title}, color: #{label.color}"
     end
-  end 
-
+  end
 
   def list_books
     puts 'There are no books yet!' if @books.empty?
