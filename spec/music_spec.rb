@@ -18,4 +18,13 @@ describe MusicAlbum do
   it 'should validate on_spotify' do
     expect(music.on_spotify).to eq 'true'
   end
+
+  it 'should validate the can_be_archived? method for less than 10years' do
+    expect(music.can_be_archived?).to eq false
+  end
+
+  it 'Should validate the archived property for more than 10years and on_spotify is true as true' do
+    music.publish_date = '2009-01-01'
+    expect(music.move_to_archive).to eq true
+  end
 end
