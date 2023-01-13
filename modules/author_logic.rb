@@ -22,5 +22,4 @@ module AuthorModule
     end
     File.write('./data/authors.json', JSON.generate(data))
   end
-
 end
