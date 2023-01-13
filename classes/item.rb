@@ -2,6 +2,7 @@ require 'date'
 
 class Item
   attr_accessor :publish_date, :archived, :id, :name
+  attr_reader :genre, :author, :label
 
   def initialize(name, publish_date, archived: false)
     @id = Random.rand(1...1000)
@@ -28,8 +29,6 @@ class Item
   def move_to_archive
     @archived = true if can_be_archived?
   end
-
-  private
 
   def can_be_archived?
     current_year = Time.new.year
