@@ -1,14 +1,5 @@
 <a name="readme-top"></a>
 
-<div align="center">
-
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-
-  <h3><b>Microverse README Template</b></h3>
-
-</div>
-
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
@@ -21,7 +12,7 @@
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-- [👤 Author](#author)
+- [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
@@ -31,7 +22,7 @@
 
 # 📖 Leaderboard <a name="about-project"></a>
 
-**Morse Decode**  is a method used in telecommunication to decode symbol characters as standardized sequences of two different signal durations, called dots and dashes, or dits and dahs.[3][4] Morse code is named after Samuel Morse, one of the inventors of the telegraph.
+**Catalog App** is an interactive digital backend app that allows you to show all items and products in a simple, visual and intuitive way.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -46,8 +37,8 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **Decoding Morse Code.**
-- **Use Ruby.**
+- **Add Items.**
+- **Save Information into database.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -67,12 +58,12 @@ In order to run this project you need:
 Clone this repository to your desired folder or download the Zip folder:
 
 ```
-git clone https://github.com/AdnanOlarmmi/Morse-Decode.git
+git clone https://github.com/AdnanOlarmmi/Catalog-App.git
 ```
 
 - Navigate to the location of the folder in your machine:
 
-**``you@your-Pc-name:~$ cd Morse-Decode``**
+**``you@your-Pc-name:~$ cd Catalog-App``**
 
 ### Install
 
@@ -99,7 +90,7 @@ rubocop
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 👤 Author <a name="author"></a>
+## 👥 Authors <a name="authors"></a>
 
 👤 **Is-haq, Adnan Olamilekan**
 
@@ -107,11 +98,24 @@ rubocop
 - Twitter: [@AdnanIshaqOla](https://twitter.com/AdnanIshaqOla)
 - LinkedIn: [Adnan (Olamilekan) Is-haq](https://linkedin.com/in/adnan-is-haq-olamilekan)
 
+👤 **Ahmed Nazir Musah**
+
+- GitHub: [@ahmednazirmusah](https://github.com/AhmedNazirMusah)
+- Twitter: [@ahmednazirmush](https://twitter.com/ahmednazirmusah)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ahmed-nazir-musah-529956214)
+
+👤 **Joel Kugonza**
+
+- GitHub: [@joelkugonza](https://github.com/Joel-100)
+- Twitter: [@joelkugonza](https://twitter.com/JoelKugonza)
+- LinkedIn: [@joelkugonza](https://www.linkedin.com/in/joel-kugonza/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Add more classes**
+- [ ] **Add Front end**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
