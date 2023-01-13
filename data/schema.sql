@@ -26,3 +26,17 @@ CREATE TABLE authors (
     name VARCHAR(255) NOT NULL,
     PRIMARY KEY(id)
 );
+
+CREATE TABLE music_album (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    on_spotify BOOLEAN,
+    publish_date DATE,
+    FOREIGN KEY(id) REFERENCES ITEM(id)
+);
+
+CREATE TABLE genre (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
+);
+
