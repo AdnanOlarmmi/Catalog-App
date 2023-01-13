@@ -12,3 +12,17 @@ CREATE TABLE labels (
     title VARCHAR(255) NOT NULL,
     color VARCHAR(255) NOT NULL
 )
+
+CREATE TABLE games (
+    id  INT,
+    multiplayer BOOLEAN,
+    last_played_at DATE,
+    publish_date DATE,
+    FOREIGN KEY(id) REFERENCES item(id)
+);
+
+CREATE TABLE authors (
+    id  INT GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(255) NOT NULL,
+    PRIMARY KEY(id)
+);
