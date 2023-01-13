@@ -7,7 +7,7 @@ describe Book do
   author = 'J.R.R. Tolkien'
   publish_date = '1954-07-29'
   publisher = 'Allen & Unwin'
-  cover_state = 'good'
+  cover_state = 'bad'
   book = Book.new(title, author, publisher, cover_state, publish_date)
 
   it 'should validate the book.title value' do
@@ -27,6 +27,17 @@ describe Book do
   end
 
   it 'should validate the book.cover_state value' do
-    expect(book.cover_state).to eq 'good'
+    expect(book.cover_state).to eq 'bad'
   end
+
+  it 'should validate can_be_archived method to true for bad and or more than ten years' do
+    expect(book.can_be_archived?).to eq true
+  end
+
+    it 'should validate can_be_archived method to false for good and  less than ten years' do
+    book.cover_state = 'good'
+    book.publish_date = '2019-07-29'
+    expect(book.can_be_archived?).to eq false
+  end
+
 end
