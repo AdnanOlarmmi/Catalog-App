@@ -84,8 +84,15 @@ To run the project, follow these instructions:
 
 To run tests, run the following command:
 
+- To run Linter Tests, run:
+
 ```
 rubocop
+```
+
+- To run Unit Tests, run:
+```
+rspec
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -111,7 +118,7 @@ rubocop
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Add more classes**
+- [ ] **Add more items**
 - [ ] **Add Front end**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

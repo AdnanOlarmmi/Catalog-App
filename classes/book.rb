@@ -21,10 +21,10 @@ class Book < Item
 end
 
 title = 'The Lord of the Rings'
-  author = 'J.R.R. Tolkien'
-  publish_date = '1954-07-29'
-  publisher = 'Allen & Unwin'
-  cover_state = 'good'
-  book = Book.new(title, author, publisher, cover_state, publish_date)
+author = 'J.R.R. Tolkien'
+publish_date = '1954-07-29'
+publisher = 'Allen & Unwin'
+cover_state = 'good'
+book = Book.new(title, author, publisher, cover_state, publish_date)
 
-  puts book.can_be_archived?
+puts book.can_be_archived?
