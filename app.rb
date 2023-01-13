@@ -111,7 +111,7 @@ class App
     on_spotify = gets.chomp == 'true'
     puts 'What genre is the above music'
     genre = gets.chomp
-    @genres.push(Genre.new(genre))
+    @genres.push(Genre.new(genre)) if @genres.none? { |g| g.name == genre }
     @music_albums.push(MusicAlbum.new(name, publish_date, on_spotify))
     puts 'Music album added'
   end
@@ -169,7 +169,15 @@ class App
   def list_all_authors
     puts 'There are no authors yet!' if @authors.empty?
     @authors.each do |author|
-      puts "Author's name is: #{author['name']}"
+      puts "Author's name is: #{author.full_name}"
+    end
+  end
+
+  def list_music_albums
+    puts 'There are no music albums yet!' if @music_albums.empty?
+    @music_albums.each do |music_album|
+      puts "Title: #{music_album.name}, Publish Date: #{music_album.publish_date},
+      On Spotify: #{music_album.on_spotify}"
     end
   end
 end

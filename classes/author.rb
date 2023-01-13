@@ -1,10 +1,10 @@
 class Author
-  attr_accessor :name, :items
+  attr_accessor :full_name, :items
 
-  def initialize(name)
+  def initialize(full_name)
     @id = Random.rand(1..1000)
     @items = []
-    @name = name
+    @full_name = full_name
   end
 
   def add_item(item)
