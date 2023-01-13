@@ -7,3 +7,8 @@ CREATE TABLE books (
     publish_date DATE NOT NULL
 );
 
+CREATE TABLE labels (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    color VARCHAR(255) NOT NULL
+)
