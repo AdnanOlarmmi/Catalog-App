@@ -93,19 +93,16 @@ rubocop
 ## 👥 Authors <a name="authors"></a>
 
 👤 **Is-haq, Adnan Olamilekan**
-
 - GitHub: [@AdnanOlarmmi](https://github.com/adnanolarmmi)
 - Twitter: [@AdnanIshaqOla](https://twitter.com/AdnanIshaqOla)
 - LinkedIn: [Adnan (Olamilekan) Is-haq](https://linkedin.com/in/adnan-is-haq-olamilekan)
 
 👤 **Ahmed Nazir Musah**
-
 - GitHub: [@ahmednazirmusah](https://github.com/AhmedNazirMusah)
 - Twitter: [@ahmednazirmush](https://twitter.com/ahmednazirmusah)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ahmed-nazir-musah-529956214)
 
 👤 **Joel Kugonza**
-
 - GitHub: [@joelkugonza](https://github.com/Joel-100)
 - Twitter: [@joelkugonza](https://twitter.com/JoelKugonza)
 - LinkedIn: [@joelkugonza](https://www.linkedin.com/in/joel-kugonza/)
