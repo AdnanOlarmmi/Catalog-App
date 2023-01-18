@@ -20,7 +20,7 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 Leaderboard <a name="about-project"></a>
+# 📖 Catalog App <a name="about-project"></a>
 
 **Catalog App** is an interactive digital backend app that allows you to show all items and products in a simple, visual and intuitive way.
 
